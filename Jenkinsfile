@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "YOUR_DOCKERHUB_USERNAME/nodejs-cicd-app"
+        IMAGE_NAME = "preethamkmenon/nodejs-cicd-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         DOCKERHUB_CREDS = credentials('dockerhub-creds')
         PATH = "/usr/local/bin:/usr/bin:${env.PATH}"
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-creds',
-                    url: 'https://github.com/YOUR_GITHUB_USERNAME/nodejs-cicd-app.git'
+                    url: 'https://github.com/preethamk54758-maker/nodejs-cicd-app1.git'
             }
         }
 
